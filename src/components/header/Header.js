@@ -1,12 +1,13 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import './Header.scss';
 
-
-const NavBar = () => {
+const Header = () => {
     return (
-        <div>
+        <header className="header" data-test="header">
+            <img src="https://via.placeholder.com/300x300.png?text=No Image" className="logo-image" data-test="logo-image" alt="Logo"/>
             <nav>
-                <ul>
+                <ul className="nav">
                     <li><NavLink to="/">Home</NavLink></li>
                     <li><NavLink to="/about">About</NavLink></li>
                     <li><NavLink to="/contact">Contact</NavLink></li>
@@ -14,8 +15,8 @@ const NavBar = () => {
                     <li><NavLink to="/sign-up">SignUp</NavLink></li>
                 </ul>
             </nav>
-        </div>
+        </header>
     )
 }
 
-export default NavBar;
+export default Header;
