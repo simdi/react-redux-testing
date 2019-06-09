@@ -7,6 +7,16 @@ import Login from './views/auth/Login';
 import Register from './views/auth/Register';
 import Headline from './components/headline/Headline';
 
+const tempArr = [
+    {
+        fName: 'Doe',
+        lName: 'John',
+        email: 'johndoe@yahoo.com',
+        age: 34,
+        onlineStatus: true
+    }
+]
+
 const App = () => {
     return (
         <BrowserRouter>
@@ -15,7 +25,7 @@ const App = () => {
                 <Route exact path="/" component={Home} />
                 <Route path="/login" component={Login} />
                 <Route path="/sign-up" component={Register} />
-                <Headline header="Post" desc="Click the button to render posts" />
+                <Headline header="Post" desc="Click the button to render posts" tempArr={tempArr} />
             </div>
         </BrowserRouter>
     );
